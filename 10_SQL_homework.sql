@@ -53,13 +53,13 @@ DROP COLUMN middle_name;
 
 -- 4a. List the last names of actors, as well as how many actors have that last name.
 
-SELECT count(*), last_name
+SELECT COUNT(*), last_name
 FROM actor
 GROUP BY last_name;
 
 -- 4b. List last names of actors and the number of actors who have that last name, but only for names that are shared by at least two actors
 
-SELECT count(*), last_name
+SELECT COUNT(*), last_name
 FROM actor
 GROUP BY last_name
 HAVING COUNT(*) > 1;
